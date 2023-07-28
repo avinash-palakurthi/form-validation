@@ -1,0 +1,93 @@
+:root {
+  --success-color: #ff8543;
+  --error-color: #c70b0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(195, 204, 252);
+  border-radius: 10px;
+  box-shadow: 10px 12px 10px rgba(5, 5, 5, 0.6);
+  width: 400px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+h1 {
+  color: #3b4c5d;
+  text-align: center;
+  padding: 0 0 10px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+  color: #c3cfe2;
+}
+
+.form-control input {
+  display: block;
+  border: 2px solid rgb(182, 187, 228);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #8888;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: #3b4c5d;
+  color: white;
+  border: 2px solid #3b4c5d;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
